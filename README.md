@@ -1,1 +1,1 @@
-# Web-Dev-Final
+Final Project for Web Development at NCSSM (12th grade)

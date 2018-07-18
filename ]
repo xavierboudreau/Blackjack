@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+	<head>
+		<title>
+			ASCII BlackJack
+		</title>
+		<meta charset="utf-8/"/>
+		<link rel="stylesheet"  type="text/css" href="final.css"/>
+		<script type="text/javascript" src="final.js"></script>	
+    </head>
+	<body>
+        <div id="titleScreen" onclick="newGame();">
+            <pre>
+
+   _____    __________________ .___.___  __________.__                 __        ____.              __    
+  /  _  \  /   _____/\_   ___ \|   |   | \______   \  | _____    ____ |  | __   |    |____    ____ |  | __
+ /  /_\  \ \_____  \ /    \  \/|   |   |  |    |  _/  | \__  \ _/ ___\|  |/ /   |    \__  \ _/ ___\|  |/ /
+/    |    \/        \\     \___|   |   |  |    |   \  |__/ __ \\  \___|     | __|    |/ __ \\  \___|    < 
+\____|__  /_______  / \______  /___|___|  |______  /____(____  /\___  >__|_ \________(____  /\___  >__|_ \
+        \/        \/         \/                  \/          \/     \/     \/             \/     \/     \/
+           
+            </pre>
+            <p>Click here to play.</p>
+            <br/>
+       </div>
+            <section id="game">
+            <table class="score">
+                    <tr>
+                        <th colspan="1">Dealer</th>
+                        <td colspan="3">Score</td>
+                    </tr>
+                    <tr>
+                        <th colspan="1">Player</th>
+                        <td colspan="3">Score</td>
+                    </tr>
+                    <tr>
+                        <th>Bet</th>
+                        <td><input id="increase" type="button" onmousedown="increase();" value="Increase" disabled="true"/></td>
+                        <td><input id="decrease" type="button" onmousedown="decrease();" value="Decrease" disabled="true"/></td>
+                        <td><p id="bet"></p></td>
+                    </tr>
+                    <tr>
+                        <td colspan="4"><input id="submitBet" disabled="true" type="button" onclick="submitBet();" value="Submit Bet"/></td>
+                    <tr>
+                        <td  colspan="4"><p id="chips"></p></td>
+                    <tr>
+                        <td class="input" id="instructions" colspan="4"></td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="newRound" type="button" onclick="newRound();" value="New Round" disabled="true"/>
+                        </td>
+                        <td>
+                            <input id="hit" type="button" onclick="hit();" value="Hit" disabled="true"/>
+                        </td>
+                        <td>
+                            <input id="stand" type="button" onclick="stand();" value="Stand" disabled="true"/>
+                        </td>
+                        <td>
+                            <input id="surrender" type="button" onclick="surrender();" value="Surrender" disabled="true"/>
+                        </td>
+                    </tr>
+                </table>
+	     <table class="table">
+            <tr class="cards">
+                <th>Dealer</th>
+                <td class="card1">
+                    <img class="cardBack" src="cardBack.jpg" alt="cardBack"/>
+                </td>
+			    <td> 
+                    <img class="cardFrontTemplate" src="cardFront.jpg" alt="cardFront"/>
+                    <img class="suitTop" src="spade.gif" alt="Spades"/>
+                    <img class="suitBottom" src="diamond.jpg" alt="Diamonds"/>
+                    <div class="symbol">1</div>
+                </td>
+                <td>
+                    <img class="cardFrontTemplate" src="cardFront.jpg" alt="card"/>
+                    <img class="suitTop" src="heart.png" alt="Hearts"/>
+                    <img class="suitBottom" src="club.jpg" alt="Clubs"/>
+                </td>
+                <td>
+                </td>
+            </tr>
+            <tr class="cards">
+                <th>Player</th>
+                <td id="slot1" class="card"></td>
+			    <td id="slot2"></td>
+                <td id="slot3"></td>
+                <td id="slot4"></td>
+                <td id="slot5"></td>
+            </tr>
+        </table>
+    </section>
+    <p id="yo"></p>
+    </body>
+</html>

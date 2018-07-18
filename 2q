@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+	<head>
+		<title>
+			ASCII BlackJack
+		</title>
+		<meta charset="UTF-8"/>
+		<link rel="stylesheet"  type="text/css" href="final.css"/>
+		<script type="text/javascript" src="final.js"></script>	
+    </head>
+	<body>
+        <div id="titleScreen" onclick="newGame();">
+            <pre>
+ __________.__                 __          ____.              __    
+ \______   \  | _____    ____ |  | __     |    |____    ____ |  | __
+  |    |  _/  | \__  \ _/ ___\|  |/ /     |    \__  \ _/ ___\|  |/ /
+  |    |   \  |__/ __ \\  \___|    <  /\__|    |/ __ \\  \___|    < 
+  |______  /____(____  /\___  >__|_ \ \________(____  /\___  >__|_ \
+         \/          \/     \/     \/               \/     \/     \/
+            </pre>
+            <p>Click here to play.</p>
+            <br/>
+       </div>
+            <section id="game"><h1>Blackjack<h1>
+            <table class="score">
+                    <tr>
+                        <th>Bet</th>
+                        <td><input id="increase" type="button" onmousedown="increase();" value="Increase" disabled/></td>
+                        <td><input id="decrease" type="button" onmousedown="decrease();" value="Decrease" disabled/></td>
+                        <td>
+                            <p id="bet"></p>
+                            <input id="submitBet" disabled type="button" onclick="submitBet();" value="Submit Bet"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td  colspan="4"><p id="chips"></p></td>
+                    <tr>
+                        <td class="input" id="instructions" colspan="4">Please submit a bet. </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input id="newRound" type="button" onclick="newRound();" value="New Round" disabled/>
+                        </td>
+                        <td>
+                            <input id="hit" type="button" onclick="hit();" value="Hit" disabled/>
+                        </td>
+                        <td>
+                            <input id="stand" type="button" onclick="stand();" value="Stand" disabled/>
+                        </td>
+                        <td>
+                            <input id="surrender" type="button" onclick="surrender();" value="Surrender" disabled/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Music:  </td>
+                        <td colspan="3">
+                            <input type="button" onclick="soundOff();" value="Off"/>
+                            <input type="button" value="Jordan Belfort (NSFW)" onclick="JordanB();"/>
+                            <input type="button" value="The Thorn" onclick="thorn();"/>
+                            <input type="button" value="Impromptu Fantasy" onclick="impromptu();"/>
+                            <input type="button" value="Blood Sec Hackers Theme" onclick="blood();"/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td colspan="4">
+                            <audio id="thorn" autoplay loop>
+                                <source src="thorn.mp3" type="audio/mpeg">
+                            </audio>
+                            <audio id="JordanB" loop>
+                                <source src="JordanBelfort.mp3" type="audio/mpeg">
+                            </audio>
+                            <audio id="impromptu" loop>
+                                <source src="impromptu.mp3" type="audio/mpeg">
+                            </audio>
+                            <audio id="blood" loop>
+                                <source src="blood.mp3" type="audio/mpeg">
+                            </audio>
+                        </td>
+                    </tr>
+                </table>
+	     <table class="table" id="table">
+            <tr class="cards">
+                <th class="hands" id="dealer">Dealer</th>
+                <td class="card1">
+                    <img id="dSlot1"/>
+                    <br/>
+                    <!-- ^solves a spacing problem^-->
+                </td>
+			    <td> 
+                    <img src="" alt="emptySlot" id="dSlot2"/> 
+                </td>
+                <td>
+                    <img id="dSlot3" src="" alt="emptySlot"/>
+                </td>
+                <td>
+                    <img id="dSlot4" src="" alt="emptySlot"/>
+                </td>
+                <td>
+                    <img id="dSlot5" src="" alt="emptySlot"/>
+                </td>
+                <td>
+                    <img id="dSlot6" src="" alt="emptySlot"/>
+                </td>
+            </tr>
+            <tr class="cards">
+                <th class="hands" id="player">Player</th>
+                <td>
+                    <img src="" alt="emptySlot" id="pSlot1"/>
+                </td>
+                <td>
+                    <img src="" alt="emptySlot" id="pSlot2"/>
+                </td>
+                <td>
+                    <img src="" alt="emptySlot" id="pSlot3"/>
+                </td>
+                <td>
+                    <img src="" alt="emptySlot" id="pSlot4"/>
+                </td>
+                <td>
+                    <img src="" alt="emptySlot" id="pSlot5"/>
+                </td>
+                <td>
+                    <img src="" alt="emptySlot" id="pSlot6"/>
+                </td>
+            </tr>
+        </table>
+    </section>
+    </body>
+</html>

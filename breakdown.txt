@@ -1,0 +1,11 @@
+Final Project
+Ryan Steed and Xavier Boudreau
+
+Boudreau:
+Coded mechanics of game, including deck creation and shuffling and the calling of cards with specific attributes denoting suit, value and symbol, as well as gameplay regarding actions and outcomes. 
+
+Steed:
+Coded asthetics of game, including HTML and CSS structure and style, and on-screen interaction/movement (alerts, card pictures, music).
+
+
+Supported in Mozilla Firefox; not fully supported (beyond first round) in Chrome and Safari due to "use strict"    ; javascript requirement.
